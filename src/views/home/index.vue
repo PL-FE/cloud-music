@@ -10,27 +10,30 @@
       ></el-input>
     </div>
     <div class="flexCenter top_right">
-      <!-- <img src="@/assets/logo.jpg" /> -->
       <el-avatar
         style="width: 30px; height: 30px; margin-right: 10px"
         src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
       ></el-avatar>
-      <span class="textEllipsis">多么希望恍然大悟</span>
+      <span class="textEllipsis">Admin</span>
       <el-icon><brush-filled /></el-icon>
       <el-icon><setting /></el-icon>
     </div>
   </div>
   <div class="content">
-    <div class="left">home</div>
+    <div class="left">
+      <LeftMenu />
+    </div>
     <div class="main">home</div>
   </div>
 </template>
 
 <script setup>
 import { Search } from '@element-plus/icons-vue'
+import LeftMenu from './leftMenu.vue'
 import { ref } from 'vue'
 
 const sreachValue = ref('')
+
 </script>
 
 <style lang="scss" scoped>
@@ -55,7 +58,6 @@ $leftWidth: 330px;
 }
 .left {
   height: calc(100vh - $topHeight);
-  width: $leftWidth;
   border-right: 1px solid #ccc;
 }
 
